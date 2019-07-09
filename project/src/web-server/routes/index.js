@@ -15,10 +15,10 @@ class Router {
 
   [_getRoutes]() {
     this[_router].get('/', (request, response) => {
-      response.render('root.hbs');
+      response.render('root.hbs', { pageTitle: 'Main menu' });
     });
     this[_router].get('/lesson01', (request, response) => {
-      response.render('pages/lesson01.hbs');
+      response.render('pages/lesson01.hbs', { pageTitle: 'Lesson 01' });
     });
   }
 }
