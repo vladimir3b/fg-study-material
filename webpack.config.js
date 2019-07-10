@@ -3,20 +3,25 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   watch: true,
-  entry: './project/_sources/index.ts',
+  entry: './project/_sources/index.js',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              // allowTsInNodeModules: true
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
         use: [
           "style-loader", // creates style nodes from JS strings
           "css-loader", // translates CSS into CommonJS
-          //"sass-loader" // compiles Sass to CSS, using Node Sass by default
           {
             loader: 'sass-loader',
             options: {
