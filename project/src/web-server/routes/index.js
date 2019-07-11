@@ -18,7 +18,11 @@ class Router {
       response.render('root.hbs', { pageTitle: 'Main menu' });
     });
     this[_router].get('/lesson01', (request, response) => {
-      response.render('pages/lesson01.hbs', { pageTitle: 'Lesson 01' });
+      response.render('pages/lesson01.hbs', {
+        pageTitle: 'Lesson 01',
+        pageStyle: 'style01',
+        pageScript: 'script01'
+      });
     });
   }
 }

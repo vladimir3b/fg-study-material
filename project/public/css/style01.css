@@ -1,0 +1,9 @@
+body {
+  background-color: red; }
+
+.nice-button {
+  background-color: chocolate;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem; }
+

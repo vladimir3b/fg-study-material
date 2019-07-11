@@ -1,27 +1,39 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = {
   mode: 'development',
   watch: true,
-  entry: './project/_sources/index.js',
+  entry: {
+    main: './project/_sources/ts/main.ts',
+    style01: './project/_sources/scss/lesson01.scss',
+    style02: './project/_sources/scss/lesson02.scss',
+    script01: './project/_sources/ts/lesson01.ts',
+    script02: './project/_sources/ts/lesson02.ts'
+  },
+  plugins: [
+    new FixStyleOnlyEntriesPlugin({ extensions: ['scss', 'css'] }),
+    new MiniCssExtractPlugin({
+      filename: '../css/[name].css'
+    })
+  ],
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: [
           {
-            loader: 'ts-loader',
-            options: {
-              // allowTsInNodeModules: true
-            }
+            loader: 'ts-loader'
           }
         ]
       },
       {
         test: /\.scss$/,
         use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
           {
             loader: 'sass-loader',
             options: {
@@ -36,7 +48,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, './project/public/js')
   }
 };
