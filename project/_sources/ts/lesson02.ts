@@ -1,7 +1,4 @@
-class Lesson02 {
-  static log(message: string): void {
-    console.log(`Lesson 01: ${message}`);
-  }
-}
-
-Lesson02.log('This is the second lesson.');
+import { MDCDialog } from '@material/dialog';
+const dialog = new MDCDialog(document.querySelector('.mdc-dialog'));
+const button = document.getElementById('button1');
+button.addEventListener('click', () => dialog.open());

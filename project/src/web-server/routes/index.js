@@ -1,8 +1,9 @@
 const express = require('express');
 
-
 const _router = Symbol('_router');
 const _getRoutes = Symbol('_getRoutes');
+
+const NUMBER_OF_PAGES = 2;
 
 class Router {
   constructor() {
@@ -17,13 +18,15 @@ class Router {
     this[_router].get('/', (request, response) => {
       response.render('root.hbs', { pageTitle: 'Main menu' });
     });
-    this[_router].get('/lesson01', (request, response) => {
-      response.render('pages/lesson01.hbs', {
-        pageTitle: 'Lesson 01',
-        pageStyle: 'style01',
-        pageScript: 'script01'
+    for(let i = 1; i <= NUMBER_OF_PAGES; i++) {
+      this[_router].get(`/lesson0${i}`, (request, response) => {
+        response.render(`pages/lesson0${i}.hbs`, {
+          pageTitle: `Lesson 0${i}`,
+          pageStyle: `style0${i}`,
+          pageScript: `script0${i}`
+        });
       });
-    });
+    }
   }
 }
 

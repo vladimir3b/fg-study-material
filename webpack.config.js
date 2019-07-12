@@ -6,7 +6,6 @@ module.exports = {
   mode: 'development',
   watch: true,
   entry: {
-    main: './project/_sources/ts/main.ts',
     style01: './project/_sources/scss/lesson01.scss',
     style02: './project/_sources/scss/lesson02.scss',
     script01: './project/_sources/ts/lesson01.ts',
