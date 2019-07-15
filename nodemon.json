@@ -1,5 +1,5 @@
 {
-  "watch": ["src"],
+  "watch": ["src/", "./config.json"],
   "verbose": true,
   "ext": "js, mjs, json",
   "ignore": [

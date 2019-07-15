@@ -3,7 +3,11 @@ const express = require('express');
 const _router = Symbol('_router');
 const _getRoutes = Symbol('_getRoutes');
 
-const NUMBER_OF_PAGES = 2;
+const NUMBER_OF_PAGES = require('./../../../../config.json').numberOfPages;
+
+function twoDigits(number) {
+  return (number <= 9) ? `0${number}` : `${number}`;
+}
 
 class Router {
   constructor() {
@@ -21,9 +25,9 @@ class Router {
     for(let i = 1; i <= NUMBER_OF_PAGES; i++) {
       this[_router].get(`/lesson0${i}`, (request, response) => {
         response.render(`pages/lesson0${i}.hbs`, {
-          pageTitle: `Lesson 0${i}`,
-          pageStyle: `style0${i}`,
-          pageScript: `script0${i}`
+          pageTitle: `Lesson ${twoDigits(i)}`,
+          pageStyle: `style${twoDigits(i)}`,
+          pageScript: `script${twoDigits(i)}`
         });
       });
     }

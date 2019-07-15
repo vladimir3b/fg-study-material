@@ -4,7 +4,7 @@
   "description": "Study JavaScript and Typescript",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon ./project/index.js",
+    "start": "nodemon ./project/index.js",
     "build": "webpack"
   },
   "repository": {
@@ -22,21 +22,19 @@
   },
   "homepage": "https://github.com/vladimirioan82/fg-study-material#readme",
   "dependencies": {
-    "@material/card": "^3.0.0",
-    "@material/dialog": "^3.0.0",
     "@types/popper.js": "^0.4.3",
     "bootstrap": "^4.3.1",
     "express": "^4.17.0",
     "express-handlebars": "^3.1.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.11",
+    "material-components-web": "^3.0.0",
     "nodemon": "^1.18.9",
     "popper.js": "^1.15.0",
     "rxjs": "^6.5.2",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "@material/typography": "^3.0.0",
     "@types/bootstrap": "^4.3.1",
     "@types/jquery": "^3.3.1",
     "css-loader": "^3.0.0",

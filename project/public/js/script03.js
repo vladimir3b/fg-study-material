@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./project/_sources/ts/lesson02.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./project/_sources/ts/lesson03.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1991,15 +1991,15 @@ eval("module.exports = extend\n\nvar hasOwnProperty = Object.prototype.hasOwnPro
 
 /***/ }),
 
-/***/ "./project/_sources/ts/lesson02.ts":
+/***/ "./project/_sources/ts/lesson03.ts":
 /*!*****************************************!*\
-  !*** ./project/_sources/ts/lesson02.ts ***!
+  !*** ./project/_sources/ts/lesson03.ts ***!
   \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! material-components-web */ \"./node_modules/material-components-web/index.js\");\n\r\nmaterial_components_web__WEBPACK_IMPORTED_MODULE_0__[\"autoInit\"]();\r\nconst myDialog = new material_components_web__WEBPACK_IMPORTED_MODULE_0__[\"dialog\"].MDCDialog(document.querySelector('.mdc-dialog'));\r\nconst button = document.getElementById('button1');\r\nbutton.addEventListener('click', () => myDialog.open());\r\n\n\n//# sourceURL=webpack:///./project/_sources/ts/lesson02.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var material_components_web__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! material-components-web */ \"./node_modules/material-components-web/index.js\");\n\r\nmaterial_components_web__WEBPACK_IMPORTED_MODULE_0__[\"autoInit\"]();\r\nconst MDCTextField = material_components_web__WEBPACK_IMPORTED_MODULE_0__[\"textField\"].MDCTextField;\r\nconst firstName = new MDCTextField(document.querySelector('#firstName'));\r\nconst lastName = new MDCTextField(document.querySelector('#lastName'));\r\nconst email = new MDCTextField(document.querySelector('#email'));\r\nconst submitButton = document.querySelector('#submitButton');\r\nsubmitButton.addEventListener('click', () => {\r\n    const response = {\r\n        firstName: firstName.value,\r\n        lastName: lastName.value,\r\n        email: email.value\r\n    };\r\n    console.log(JSON.stringify(response));\r\n});\r\n\n\n//# sourceURL=webpack:///./project/_sources/ts/lesson03.ts?");
 
 /***/ })
 

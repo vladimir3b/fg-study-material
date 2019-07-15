@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script type="text/javascript" src="http://livejs.com/live.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/{{ pageStyle }}.css">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  {{#if pageStyle}}
+    <link rel="stylesheet" type="text/css" href="css/{{ pageStyle }}.css">
+  {{/if}}
+  <link rel="stylesheet" href="css/fonts.css">
   <title>{{ pageTitle }}</title>
 </head>
 <body>
   {{{body}}}
-  <script type="text/javascript" src="js/{{ pageScript }}.js"></script>
+  {{#if pageStyle}}
+    <script type="text/javascript" src="js/{{ pageScript }}.js"></script>
+  {{/if}}
 </body>
 </html>

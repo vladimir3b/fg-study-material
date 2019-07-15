@@ -1,0 +1,24 @@
+@import "~material-components-web/material-components-web";
+
+.container {
+  button {
+    width: 200px;
+  }
+  h1 {
+    font-size: 5rem;
+    font-family: 'Mountains of Christmas', cursive;
+    padding: 0;
+    margin: 0;
+  }
+  .element {
+    .mdc-text-field__input {
+      width: 350px;
+    }
+    margin-top: 1.5rem;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
