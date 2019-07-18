@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container mdc-elevation--z8">
 
   <h1 class="element">
-    Login form
+    Sign-up form
   </h1>
 
   <div class="element mdc-text-field" id="firstName">
@@ -22,10 +22,83 @@
     <div class="mdc-line-ripple"></div>
   </div>
 
+  <div class="element mdc-form-field" id="genderSelector">
+    <div class="mdc-radio">
+      <input class="mdc-radio__native-control" type="radio" id="option1" name="radios" value="male">
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+    </div>
+    <label for="option1">Male</label>
+    <div class="mdc-radio">
+      <input class="mdc-radio__native-control" type="radio" id="option2" name="radios" value="female">
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+    </div>
+    <label for="option2">Female</label>
+    <div class="mdc-radio mdc-radio--disabled">
+      <input class="mdc-radio__native-control" type="radio" id="option3" name="radios"  value="other"disabled>
+      <div class="mdc-radio__background">
+        <div class="mdc-radio__outer-circle"></div>
+        <div class="mdc-radio__inner-circle"></div>
+      </div>
+    </div>
+    <label for="option3">Other</label>
+  </div>
+
+  <div class="element">
+    <div class="mdc-select" id="hobbySelector">
+      <input type="hidden" name="enhanced-select">
+      <i class="mdc-select__dropdown-icon"></i>
+      <div class="mdc-select__selected-text"></div>
+      <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
+        <ul class="mdc-list">
+          <li class="mdc-list-item" data-value="languages">
+            Learning foreign languages
+          </li>
+          <li class="mdc-list-item" data-value="fitness">
+            Fitness and bodybuilding
+          </li>
+          <li class="mdc-list-item" data-value="programming">
+            Web developmenthobbySelect
+          </li>
+          <li class="mdc-list-item" data-value="photo">
+            Taking nice pictures
+          </li>
+          <li class="mdc-list-item" data-value="design">
+            Design a nice magazine
+          </li>
+          <li class="mdc-list-item" data-value="other">
+            Other
+          </li>
+        </ul>
+      </div>
+      <span class="mdc-floating-label">Pick your favorite hobby</span>
+      <div class="mdc-line-ripple"></div>
+    </div>
+  </div>
+
+
+  <div class="mdc-form-field element">
+    <div class="mdc-checkbox" id="termsCheckbox">
+      <input type="checkbox" class="mdc-checkbox__native-control" id="my-checkbox">
+      <div class="mdc-checkbox__background">
+        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+          <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59">
+        </svg>
+        <div class="mdc-checkbox__mixedmark"></div>
+      </div>
+    </div>
+    <label for="my-checkbox">I have read and agree to the Privacy</label>
+  </div>
+
   <button
       id="submitButton"
       class="element mdc-fab mdc-fab--extended">
-    Send me...
+    Send data...
   </button>
 
 </div>
